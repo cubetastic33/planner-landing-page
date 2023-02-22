@@ -155,7 +155,7 @@ main {
   font-size: 1rem;
 }
 
-#intro img {
+#intro img, #plan img {
   border-radius: 20px 0 0 20px;
   height: 65vh;
 }
@@ -178,7 +178,7 @@ button {
   Second slide
  */
 
-#features, #team, #contact {
+#features, #team, #contact, #plan {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,7 +187,7 @@ button {
   text-align: center;
 }
 
-#features h2, #team h2, #contact h2 {
+#features h2, #team h2, #contact h2, #plan h2 {
   font-size: 3rem;
   margin: 0;
 }
@@ -273,6 +273,26 @@ button {
 .member h5 {
   color: var(--gray);
   margin: 1rem 0;
+}
+
+/*
+  Plan slide
+ */
+
+#plan {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#plan img {
+  height: 90vh;
+  transform: translateY(15vh);
+}
+
+#plan h2 {
+  font-size: 4rem;
+  padding: 15vw;
+  text-align: left;
 }
 
 /*
