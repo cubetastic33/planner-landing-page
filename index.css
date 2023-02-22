@@ -134,12 +134,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 20%;
+  padding: 5vh 10vw;
 }
 
 #intro h1 {
   font-size: 4rem;
   margin: 0;
+  max-width: 500px;
 }
 
 #intro h2 {
@@ -157,7 +158,8 @@ main {
 
 #intro img, #plan img {
   border-radius: 20px 0 0 20px;
-  height: 65vh;
+  max-height: 65vh;
+  max-width: 40vw;
 }
 
 button {
@@ -285,7 +287,7 @@ button {
 }
 
 #plan img {
-  height: 90vh;
+  max-height: 90vh;
   transform: translateY(15vh);
 }
 
@@ -352,6 +354,7 @@ button {
   border-radius: 20px;
   padding: 1rem;
   resize: none;
+  width: 300px;
 }
 
 .inputField input:focus, .inputField textarea:focus {
