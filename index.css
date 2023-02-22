@@ -1,0 +1,340 @@
+:root {
+  --light-gray: #ddd;
+  --gray: #999;
+}
+
+html, body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/*
+  Components
+ */
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  border: 2px solid var(--light-gray);
+  border-radius: 1.5em;
+  padding: .6rem 1.1rem;
+  transition: background-color .3s;
+}
+
+.button:hover {
+  background-color: var(--light-gray);
+}
+
+/*
+  Header
+ */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+header h1 {
+  margin: 0 0 0 5vw;
+  font-size: 1.5rem;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0 calc(5vw - 1rem) 0 0;
+  padding: 0;
+}
+
+header li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+header a {
+  color: var(--gray);
+  transition: color .2s;
+}
+
+header a:hover {
+  color: #333;
+}
+
+/*
+  Login button
+ */
+
+.login {
+  background-color: #3772ff;
+  border-color: #3772ff;
+  color: #fff !important;
+}
+
+.login:hover {
+  background-color: #2956c5;
+  color: #fff;
+}
+
+/*
+  Footer
+ */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+footer h1 {
+  font-size: 1.5rem;
+}
+
+footer p {
+  color: var(--gray);
+  font-size: .75rem;
+}
+
+hr {
+  width: 80%;
+  background-color: var(--light-gray);
+  border: none;
+  height: 1px;
+}
+
+/*
+  Middle stuff
+ */
+
+main {
+  flex-grow: 1;
+}
+
+/*
+  First slide
+ */
+
+#intro {
+  display: flex;
+  height: calc(100vh - 6rem);
+  align-items: center;
+}
+
+#intro > div {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20%;
+}
+
+#intro h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+#intro h2 {
+  color: var(--gray);
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#intro h3 {
+  color: var(--gray);
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+#intro img {
+  border-radius: 20px 0 0 20px;
+  height: 65vh;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.buttons a {
+  color: #000;
+}
+
+/*
+  Second slide
+ */
+
+#features, #team, #contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+#features h2, #team h2, #contact h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+#features h3 {
+  color: var(--gray);
+  font-weight: normal;
+  width: 30%;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10vw;
+  padding: 15vh 10vw;
+}
+
+.feature {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature div {
+  background-color: #eee;
+  border-radius: 100%;
+}
+
+.feature img {
+  height: 4rem;
+  padding: .5rem .6rem;
+}
+
+.feature p {
+  color: var(--gray);
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+/*
+  Third slide
+ */
+
+#team {
+  padding: 0;
+}
+
+#team ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#team li {
+  color: var(--gray);
+  display: inline-block;
+  font-size: .9rem;
+  padding: .5rem;
+  margin: 5vh 0;
+}
+
+#team li.login {
+  border-radius: 1.5em;
+  padding: .5rem 1rem;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin-top: 3vh;
+}
+
+.member img {
+  height: 200px;
+  border-radius: 10px;
+}
+
+.member h4 {
+  margin: 1rem 0 0 0;
+}
+
+.member h5 {
+  color: var(--gray);
+  margin: 1rem 0;
+}
+
+/*
+  Contact slide
+ */
+
+#contact {
+  background-color: #f4f5f6;
+}
+
+#contact form {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  display: flex;
+  margin: 3rem;
+  text-align: left;
+}
+
+#contact img {
+  height: 2rem;
+}
+
+#contact h3 {
+  color: var(--gray);
+  font-weight: normal;
+}
+
+#contact p {
+  margin: 0;
+}
+
+#contact form > div:first-child {
+  margin: 10vh 10vw;
+}
+
+#contact form > div:last-child {
+  margin: 10vh 10vw 10vh 0;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField label {
+  color: var(--gray);
+  font-weight: bold;
+  font-size: .8rem;
+  text-transform: uppercase;
+  margin: .5rem 0;
+}
+
+.inputField input, .inputField textarea {
+  background-color: #eee;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem;
+  resize: none;
+}
+
+.inputField input:focus, .inputField textarea:focus {
+  outline: none;
+  background-color: #ddd;
+}
