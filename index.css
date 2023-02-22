@@ -41,17 +41,17 @@ a {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 3rem 10vw;
 }
 
 header h1 {
-  margin: 0 0 0 5vw;
+  margin: 0;
   font-size: 1.5rem;
 }
 
 header ul {
   list-style-type: none;
-  margin: 0 calc(5vw - 1rem) 0 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -125,7 +125,7 @@ main {
 
 #intro {
   display: flex;
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 8rem);
   align-items: center;
 }
 
