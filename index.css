@@ -3,6 +3,11 @@
   --gray: #999;
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter-VariableFont_slnt,wght.ttf");
+}
+
 html, body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -11,7 +16,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
 }
 
