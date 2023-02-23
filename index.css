@@ -132,8 +132,10 @@ main {
 
 #intro {
   display: flex;
-  height: calc(100vh - 8rem);
+  min-height: calc(120vh - 6rem);
   align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 
 #intro > div, #plan > div {
@@ -144,10 +146,15 @@ main {
   padding: 0 5vw 0 10vw;
 }
 
+#intro > div {
+  position: absolute;
+  top: 30vh;
+}
+
 #intro h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin: 0;
-  max-width: 500px;
+  max-width: 30vw;
 }
 
 #intro h2 {
@@ -166,7 +173,14 @@ main {
 #intro img, #plan img {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 20px 0 0 20px;
-  max-width: 50vw;
+}
+
+#intro img {
+  position: absolute;
+  left: 42%;
+  top: 10%;
+  z-index: 0;
+  max-height: 90vh;
 }
 
 button {
@@ -201,26 +215,29 @@ button {
   background-color: var(--light-gray);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
   /*
     Vertically align the image
    */
   #intro {
     flex-direction: column;
-    overflow-y: hidden;
   }
 
   #intro h1 {
     font-size: 2.5rem;
+    max-width: 300px;
   }
 
   #intro > div {
+    position: static;
     padding: 10vh 10vw;
   }
 
   #intro img {
+    position: static;
     max-width: 90vw;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
+    margin-bottom: 2rem;
   }
 }
 
@@ -243,8 +260,7 @@ button {
   }
 
   #intro img {
-    border-radius: 20px;
-    margin: 1rem;
+    width: 150vw;
   }
 }
 
@@ -261,7 +277,7 @@ section:nth-child(odd) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(95vh - 4rem);
+  min-height: calc(100vh - 4rem);
   padding: 2rem 0;
   text-align: center;
 }
